@@ -7,6 +7,7 @@
     <title>Checkout Bootstrap</title>
     <link rel="stylesheet" href="part1.css">
     <link rel="shortcut icon" href="./1.png" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
     <img src="1.png" alt="" class="img">
@@ -18,7 +19,7 @@
     </div>
     <div class="big_table">
         <div class="C1">
-            <form action="link_server.php">
+            <form action="">
             <div class="c1_r1">
             Billing address      
             </div>
@@ -28,22 +29,25 @@
                     <div>
                         <input class="tag firstbox" type="text" id="first_name">
                     </div>
+                    <div id="Rfirstname" class="hidden alert"> Valid first name is required.</div>
                 </div>
                 <div class="fontsize_2" >
                     <label for="last_name">Last name</label>
                     <div >
                         <input class="tag lastbox" type="text"  id="last_name">
                     </div>
+                    <div class="hidden alert">Valid last name is required.</div>
                 </div>
             </div>
             <div class="fontsize ">
                 <div>
                     <label for="username">Username</label>
                     <div class="user">
-                        <span class="icon">@</span>
-                        <input class=" usernamebox" required type="email" id="username" placeholder="Username">
+                        <span class="icon ">@</span>
+                        <input class="tag usernamebox " type="email" id="username" placeholder="Username">
                     </div>
-                </div>
+                    <div class="hidden alert">Your username is required.</div>
+                </div> 
             </div>
             <div class="fontsize">
                 <label for="email">Email</label>
@@ -53,12 +57,14 @@
                 <div >
                     <input class="tag boxemail" type="text" id="email" placeholder="you@example.com">
                 </div>
+                <div class="hidden alert"> Please enter your email</div>
             </div>
             <div class="fontsize">
                 <label for="address">Address</label>
-                <div ">
+                <div >
                     <input class="tag boxemail" type="text" id="address" placeholder="1234 Main St">
                 </div>
+                <div class="hidden alert">Please enter your shipping address.</div>
             </div>
             <div class="fontsize">
                 <label for="address_2">Address 2</label>
@@ -66,7 +72,7 @@
                     (Optional)
                 </label>
                 <div >
-                    <input class="tag boxemail" type="text"  id="address_2" placeholder="Apartment or suite">
+                    <input class="tag2 boxemail" type="text"  id="address_2" placeholder="Apartment or suite">
                 </div>
             </div>
             <div class="separate">
@@ -74,24 +80,33 @@
                     Country
                     <div >
                         <select class="tag " id="country">
-                            <option value="Choose...">Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="United States">United States</option>
                         </select>
+                    </div>
+                    <div class="hidden alert">
+                        Please select a valid country.
                     </div>
                 </div>
                 <div class="fontsize state">
                     State
                     <div >
                         <select class="tag " id="state">
-                            <option value="Choose...">Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="California">California</option>
                         </select>
+                    </div>
+                    <div class="hidden alert">
+                        Please provide a valid state.
                     </div>
                 </div>
                 <div class="fontsize zip">
                     <label for="zip">Zip</label>
                     <div >
                         <input class="tag" type="text" id="zip">
+                    </div>
+                    <div class="hidden alert">
+                        Zip code required.
                     </div>
                 </div>
             </div>
@@ -128,34 +143,46 @@
                     <div>
                         <input class="tag" type="text" id="N_O_C">
                     </div>
-                    <div>
+                    <div class="fontsize_4 ">
                         Full name as displayed on card
                     </div>
+                    <div class="hidden alert">
+                        Name on card is required
+                    </div>
+                    <div class="separate">
+                        <div class="ECVV ">
+                            <label class="r1" for="expiration">Expiration</label>
+                            <div>
+                                <input class="tag " type="text" id="expiration">
+                            </div>
+                            <div  class="hidden alert">
+                                Expiration date required
+                            </div>
+                        </div>
+                        <div >
+                            <label class="r1" for="CVV">CVV</label>
+                            <div>
+                                <input class="tag " type="text" id="CVV">
+                            </div>
+                            <div class="hidden alert">
+                                Security code required
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="fontsize firstbox r1 ">
+                <div class="fontsize  r1 ">
                     <label class="r1" for="C_C_N">Credit card number</label>
                     <div>
                         <input class="tag" type="text" id="C_C_N">
                     </div>
-                </div>
-            </div>
-            <div class="separate">
-                <div class="ECVV ">
-                    <label class="r1" for="expiration">Expiration</label>
-                    <div>
-                        <input class="tag expiration" type="text" id="expiration">
-                    </div>
-                </div>
-                <div >
-                    <label class="r1" for="CVV">CVV</label>
-                    <div>
-                        <input class="tag CVV" type="text" id="CVV">
+                    <div class="hidden alert">
+                        Credit card number is required
                     </div>
                 </div>
             </div>
             <hr>
-            <button type="submit" class="button_submit">Continue to checkout</button>
         </form>
+        <button class="button_submit" onclick='clicked()'>Continue to checkout</button>
         </div>
         <div class="C2">
             <h4 class="C2_flex">
@@ -198,7 +225,7 @@
                     </li>
                 </ul>
             </div>
-            <form class="formredeem" action="link_server.php">
+            <form class="formredeem" action="">
             <div class="inputgroup">
                 <input type="text" class="form_control" placeholder="Promo code">
                 <div class="redeem">
@@ -222,5 +249,6 @@
             </li>
             </ul>
     </footer>
+    <script src="part1.js"></script>      
 </body>
 </html>
