@@ -1,17 +1,17 @@
 let change = () => {
   let input = document.getElementsByClassName('tag');
-  let alert = document.getElementsByClassName('alert'); 
+  let alert = document.getElementsByClassName('m-alert'); 
   for (let i=0; i<input.length;i++){
   if (input[i].value.trim()== '') {
-    input[i].classList.add('bd-red');
-    alert[i].classList.add('fontsize_3');
-    alert[i].classList.remove('hidden');
-    input[i].classList.remove('bd-green');
+    input[i].classList.add('border-danger');
+    alert[i].classList.add('text-danger');
+    alert[i].classList.remove('d-none');
+    input[i].classList.remove('border-primary');
   } else {
-    alert[i].classList.remove('fontsize_3');
-    alert[i].classList.add('hidden');
-    input[i].classList.remove('bd-red');
-    input[i].classList.add('bd-green');
+    alert[i].classList.remove('text-danger');
+    alert[i].classList.add('d-none');
+    input[i].classList.remove('border-danger');
+    input[i].classList.add('border-primary');
   }}
 }
 let checked = () => {
@@ -22,6 +22,10 @@ let checked = () => {
   }
   input[i].addEventListener("keyup",change);
   }
+}
+let transitions = () => {
+  let tran = document.getElementsByClassName('before-click');
+  
 }
 let clicked = () => {
   change();

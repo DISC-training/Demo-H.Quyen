@@ -5,250 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Checkout Bootstrap</title>
-    <link rel="stylesheet" href="part1.css">
     <link rel="shortcut icon" href="./1.png" type="image/x-icon">
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
-<body>
-    <img src="1.png" alt="" class="img">
-    <div class="text center"> 
-        Checkout form 
-    </div>
-    <div class="text1 center">
-        Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
-    </div>
-    <div class="big_table">
-        <div class="C1">
-            <form action="">
-            <div class="c1_r1">
-            Billing address      
-            </div>
-            <div class="fontsize separate">
-                <div class="fontsize_2 firstbox" >
-                    <label for="first_name">First name</label>
-                    <div>
-                        <input class="tag firstbox" type="text" id="first_name">
-                    </div>
-                    <div id="Rfirstname" class="hidden alert"> Valid first name is required.</div>
-                </div>
-                <div class="fontsize_2" >
-                    <label for="last_name">Last name</label>
-                    <div >
-                        <input class="tag lastbox" type="text"  id="last_name">
-                    </div>
-                    <div class="hidden alert">Valid last name is required.</div>
-                </div>
-            </div>
-            <div class="fontsize ">
-                <div>
-                    <label for="username">Username</label>
-                    <div class="user">
-                        <span class="icon ">@</span>
-                        <input class="tag usernamebox " type="email" id="username" placeholder="Username">
-                    </div>
-                    <div class="hidden alert">Your username is required.</div>
-                </div> 
-            </div>
-            <div class="fontsize">
-                <label for="email">Email</label>
-                <label for="email" class="option">
-                    (Optional)
-                </label>
-                <div >
-                    <input class="tag boxemail" type="text" id="email" placeholder="you@example.com">
-                </div>
-                <div class="hidden alert"> Please enter your email</div>
-            </div>
-            <div class="fontsize">
-                <label for="address">Address</label>
-                <div >
-                    <input class="tag boxemail" type="text" id="address" placeholder="1234 Main St">
-                </div>
-                <div class="hidden alert">Please enter your shipping address.</div>
-            </div>
-            <div class="fontsize">
-                <label for="address_2">Address 2</label>
-                <label for="address_2" class="option">
-                    (Optional)
-                </label>
-                <div >
-                    <input class="tag2 boxemail" type="text"  id="address_2" placeholder="Apartment or suite">
-                </div>
-            </div>
-            <div class="separate">
-                <div class="fontsize country">
-                    Country
-                    <div >
-                        <select class="tag " id="country">
-                            <option value="">Choose...</option>
-                            <option value="United States">United States</option>
-                        </select>
-                    </div>
-                    <div class="hidden alert">
-                        Please select a valid country.
-                    </div>
-                </div>
-                <div class="fontsize state">
-                    State
-                    <div >
-                        <select class="tag " id="state">
-                            <option value="">Choose...</option>
-                            <option value="California">California</option>
-                        </select>
-                    </div>
-                    <div class="hidden alert">
-                        Please provide a valid state.
-                    </div>
-                </div>
-                <div class="fontsize zip">
-                    <label for="zip">Zip</label>
-                    <div >
-                        <input class="tag" type="text" id="zip">
-                    </div>
-                    <div class="hidden alert">
-                        Zip code required.
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="fontsize CB1">
-                <input type="checkbox" name="CB1" id="CB1">
-                <label for="CB1">Shipping address is the same as my biling address</label> 
-            </div>
-            <div class="fontsize CB1">
-                <input type="checkbox" name="CB2" id="CB2">
-                <label for="CB2">Save this information for next time</label>
-            </div>
-            <hr>
-            <div class="fontsize">
-                <div class="c1_r2">
-                    Payment
-                </div>
-                <div class="r1">
-                    <input type="radio" name="R1" id="R1" checked required>
-                    <label for="R1">Credit card</label>
-                </div>
-                <div class="r1">
-                    <input type="radio" name="R1" id="R2">
-                    <label for="R2">Debit card</label>
-                </div>
-                <div class="r1">
-                    <input type="radio" name="R1" id="R3">
-                    <label for="R3">Paypal</label>
-                </div>
-            </div>
-            <div class="separate">
-                <div class="fontsize firstbox r1">
-                    <label for="N_O_C">Name on card</label>
-                    <div>
-                        <input class="tag" type="text" id="N_O_C">
-                    </div>
-                    <div class="fontsize_4 ">
-                        Full name as displayed on card
-                    </div>
-                    <div class="hidden alert">
-                        Name on card is required
-                    </div>
-                    <div class="separate">
-                        <div class="ECVV ">
-                            <label class="r1" for="expiration">Expiration</label>
-                            <div>
-                                <input class="tag " type="text" id="expiration">
-                            </div>
-                            <div  class="hidden alert">
-                                Expiration date required
-                            </div>
-                        </div>
-                        <div >
-                            <label class="r1" for="CVV">CVV</label>
-                            <div>
-                                <input class="tag " type="text" id="CVV">
-                            </div>
-                            <div class="hidden alert">
-                                Security code required
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="fontsize  r1 ">
-                    <label class="r1" for="C_C_N">Credit card number</label>
-                    <div>
-                        <input class="tag" type="text" id="C_C_N">
-                    </div>
-                    <div class="hidden alert">
-                        Credit card number is required
-                    </div>
-                </div>
-            </div>
-            <hr>
-        </form>
-        <button class="button_submit" onclick='clicked()'>Continue to checkout</button>
+<body class="bg-gradient-info">
+    <div class="container ">
+        <div class="py-5 text-center">
+            <img src="1.png" alt="Responsive image" alt height="72" width="72" class="d-block mx-auto mb-4 ">
+        <h2>
+          Checkout form 
+        </h2>
+        <p class="lead ">
+            Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
+        </p>
         </div>
-        <div class="C2">
-            <h4 class="C2_flex">
-            <span class="your_cart"> Your cart</span>
-            <span class="num3">3</span>
+        <div class="row">
+        <div class="col-lg-4 order-lg-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted"> Your cart</span>
+                <span class="badge badge-secondary badge-pill">3</span>
             </h4>
             <div>
-                <ul class="list-group">
-                    <li class="memoflist borderradius">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between 1h-condensed ">
                         <div > 
-                            <h6 class="big-X">Product name</h6>
-                            <small class="small-X">Brief description</small>
+                            <h6 class="my-0">Product name</h6>
+                            <small class="text-muted">Brief description</small>
                         </div>
-                        <span class="small-X fontDL">$12</span>
+                        <span class="text-muted">$12</span>
                     </li>
-                    <li class="memoflist">
+                    <li class="list-group-item d-flex justify-content-between 1h-condensed">
                         <div > 
-                            <h6 class="big-X">Second product</h6>
-                            <small class="small-X">Brief description</small>
+                            <h6 class="my-0">Second product</h6>
+                            <small class="text-muted">Brief description</small>
                         </div>
-                        <span class="small-X fontDL">$8</span>
+                        <span class="text-muted">$8</span>
                     </li>
-                    <li class="memoflist">
+                    <li class="list-group-item d-flex justify-content-between 1h-condensed">
                         <div > 
-                            <h6 class="big-X">Third item</h6>
-                            <small class="small-X">Brief description</small>
+                            <h6 class="my-0">Third item</h6>
+                            <small class="text-muted">Brief description</small>
                         </div>
-                        <span class="small-X fontDL">$5</span>
+                        <span class="text-muted">$5</span>
                     </li>
-                    <li class="memoflist">
-                        <div class="promodecode">
-                            <h6 class="big-X">Promode code</h6>
-                            <small>EXAMPLECODE</small>
+                    <li class="list-group-item d-flex justify-content-between bg-danger ">
+                        <div >
+                            <h6 class="my-0 text-white">Promode code</h6>
+                            <small class="text-white">EXAMPLECODE</small>
                         </div>
-                        <span class="promodecode">-$5</span>
+                        <span class="text-white">-$5</span>
                     </li>
-                    <li class="memoflist borderradius2 ">
+                    <li class="list-group-item d-flex justify-content-between ">
                         <span>Total (USD)</span>
                         <strong>$20</strong>
                     </li>
                 </ul>
             </div>
-            <form class="formredeem" action="">
-            <div class="inputgroup">
-                <input type="text" class="form_control" placeholder="Promo code">
-                <div class="redeem">
-                    <button type="submit" class="button_redeem">Redeem</button>
+            <form class="card p-2" action="">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Promo code">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-info">Redeem</button>
+                    </div>
                 </div>
-            </div>
             </form>
         </div>
+        <div class="col-lg-8 order-lg-1 mb-4">
+            <form id="before-click after-click" class="need-validation" novalidate>
+            <h4 class="mb-3">
+            Billing address      
+            </h4>
+            <div class="row">
+                <div class="col-md-6 mb-3" >
+                    <label for="first_name">First name</label>
+                    <div>
+                        <input class="form-control tag " type="text" id="first_name">
+                    </div>
+                    <div id="Rfirstname" class="d-none m-alert  "> Valid first name is required.</div>
+                </div>
+                <div class="col-md-6 mb-3 " >
+                    <label for="last_name">Last name</label>
+                    <div >
+                        <input class="form-control tag" type="text"  id="last_name">
+                    </div>
+                    <div class="d-none m-alert">Valid last name is required.</div>
+                </div>
+            </div>
+            <div class="mb-3 ">
+                <label for="username">Username</label>
+                <div class="input-group"> 
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">@</span>
+                    </div>
+                    <input class="form-control rounded-right tag " type="text" id="username" placeholder="Username">
+                </div> 
+                <div class="d-none m-alert">Your username is required.</div>
+            </div>
+            <div class="mb-3">
+                <label for="email">Email
+                    <span class="text-muted">
+                        (Optional)
+                    </span>
+                </label>
+                <div >
+                    <input class="form-control tag" type="email" id="email" placeholder="you@example.com">
+                </div>
+                <div class="d-none m-alert"> Please enter your email</div>
+            </div>
+            <div class="mb-3">
+                <label for="address">Address</label>
+                <div >
+                    <input class="form-control tag" type="text" id="address" placeholder="1234 Main St">
+                </div>
+                <div class="d-none m-alert">Please enter your shipping address.</div>
+            </div>
+            <div class="mb-3">
+                <label for="address_2">Address 
+                    <span for="address_2" class="text-muted">
+                        (Optional)
+                    </span>
+                </label>
+                <div >
+                    <input class="form-control" type="text"  id="address_2" placeholder="Apartment or suite">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="country">Country</label> 
+                    <div >
+                        <select class="custom-select d-block w-100 tag" id="country">
+                            <option value="">Choose...</option>
+                            <option value="United States">United States</option>
+                        </select>
+                    </div>
+                    <div class="d-none m-alert">
+                        Please select a valid country.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="State">State</label>
+                    <div >
+                        <select class="custom-select d-block w-100 tag" id="state">
+                            <option value="">Choose...</option>
+                            <option value="California">California</option>
+                        </select>
+                    </div>
+                    <div class="d-none m-alert">
+                        Please provide a valid state.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="zip">Zip</label>
+                    <div >
+                        <input class="form-control tag" type="text" id="zip">
+                    </div>
+                    <div class="d-none m-alert">
+                        Zip code required.
+                    </div>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="custom-checkbox custom-control ">
+                <input class="custom-control-input" type="checkbox" name="CB1" id="CB1">
+                <label class="custom-control-label" for="CB1">Shipping address is the same as my biling address</label> 
+            </div>
+            <div class="custom-checkbox custom-control">
+                <input class="custom-control-input" type="checkbox" name="CB2" id="CB2">
+                <label class="custom-control-label" for="CB2">Save this information for next time</label>
+            </div>
+            <hr class="mb-4">
+            <h4 class="mb-3">Payment</h4>
+            <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="R1" id="R1" checked required>
+                    <label class="custom-control-label" for="R1">Credit card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="R1" id="R2">
+                    <label class="custom-control-label" for="R2">Debit card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="R1" id="R3">
+                    <label class="custom-control-label" for="R3">Paypal</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="N_O_C">Name on card</label>
+                    <div>
+                        <input class="form-control tag" type="text" id="N_O_C">
+                    </div>
+                    <small class="text-muted">
+                        Full name as displayed on card
+                    </small>
+                    <div class="d-none m-alert">
+                        Name on card is required
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6  mb-3">
+                            <label  for="expiration">Expiration</label>
+                            <div>
+                                <input class="form-control tag " type="text" id="expiration">
+                            </div>
+                            <div  class="d-none m-alert">
+                                Expiration date required
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3" >
+                            <label for="CVV">CVV</label>
+                            <div>
+                                <input class="form-control tag" type="text" id="CVV">
+                            </div>
+                            <div class="d-none m-alert">
+                                Security code required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3 ">
+                    <label  for="C_C_N">Credit card number</label>
+                    <div>
+                        <input class="form-control tag" type="text" id="C_C_N">
+                    </div>
+                    <div class="d-none m-alert">
+                        Credit card number is required
+                    </div>
+                </div>
+            </div>
+            <hr class="mb-4">
+        </form>
+        <button class="btn btn-outline-primary btn-block btn-lg" onclick='clicked()'>Continue to checkout</button>
+        </div>
+        
+    </div>    
     </div>
-    <footer class=" center">
-        <div class="text2">© 2017-2018 Company Name</div>
-        <ul class="footer">
-            <li class="item">
+    <footer class="my-5 pt-5 text-muted text-center  ">
+        <div class="mb-1">© 2017-2018 Company Name</div>
+        <ul class="list-inline">
+            <li class="list-inline-item">
                 <a href="file:///D:/test%201/part1.html">Privacy</a>
             </li>
-            <li class="item">
+            <li class="list-inline-item">
                 <a href="file:///D:/test%201/part1.html">Terms</a>
             </li>
-            <li class="item">
+            <li class="list-inline-item">
                 <a href="file:///D:/test%201/part1.html">Support</a>
             </li>
             </ul>
     </footer>
-    <script src="part1.js"></script>      
+    <script src="part1.js"></script> 
+    <script src="bootstrap.min.js"></script>     
 </body>
 </html>
